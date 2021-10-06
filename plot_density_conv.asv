@@ -79,10 +79,10 @@ cf_triangular = @(t) min(1, (2 - 2* cos(t)) ./t.^2);
 dy = (x_max - x_min) / N; % delta_y
 y = x_min + k * dy; % y_k
 u = (j - N/2)/(x_max - x_min); % u_j
-phi = (-1).^(-(2*x_min/(x_max-x_min))*j) .* cf_sum(2*pi*u);
+phi = (-1).^(-(2*x_min/(x_max-x_min))*j) .* cf_t1(2*pi*u);
 
 find(isnan(phi));
-phi = fillmissing(phi, 'constant', 1);
+phi = fillmissing(phi
 C = ((-1).^((x_min/(x_max-x_min) + k/N)*N))/(x_max-x_min);
 pdf = real(C .* fft(phi)); % FFT
 
