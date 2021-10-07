@@ -1,6 +1,6 @@
 
 df = [3, 6];
-N = 2^10;
+N = 2^15;
 x_min = -10;
 x_max = 10;
 dx = (x_max - x_min) / N;
